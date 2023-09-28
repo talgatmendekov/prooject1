@@ -1,24 +1,33 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import Button from './components/ui/Button'
+import StudentList from './components/StudentList'
+import Card from "./components/ui/Card";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+
+
+
+const studentList = [
+  {id: '1', name: 'Berment'},
+  {id: '2', name: 'Aidana'},
+  {id: '3', name: 'Syrttan'},
+  {id: '4', name: 'Meerim'},
+]
+
+
+
+
+return (
+    <Card>
+      <input style={{backgroundColor: 'red'}} type="password"/>
+    <StudentList students={studentList} />
+
+      {/* StudentList(students) */}
+       <Button>Show Users</Button>
+       <Button>Add Todo</Button>
+       <Button>Check Todo</Button>
+       <Button>Delete</Button>
+    </Card>
   );
 }
 
